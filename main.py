@@ -29,7 +29,7 @@ try:
         license_data = yaml.safe_load(file)
 
     # Check if the user has agreed to the licenses
-    if not license_data['agree_to_license']:
+    if not license_data['agree_to_license/eula']:
         print(f"{Fore.RED}You must agree to the license agreements before running the script.")
         exit()
 
