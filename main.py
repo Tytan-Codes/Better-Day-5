@@ -21,7 +21,7 @@ try:
     subprocess.check_output(['git', 'diff', '--exit-code', script_path])
 
     # No modifications found
-    print(f"{Fore.BLACK + Back.WHITE}The script has not been modified within the Git repository.")
+    print(f"{Fore.BLACK + Back.WHITE}Script has not been modified")
 
     # Perform the loading animation
     print(f"Hello and welcome to my script. Here are your options: (Please wait while the script loads)")
@@ -29,5 +29,5 @@ try:
 
 except subprocess.CalledProcessError:
     # Modifications found
-    print(f"{Fore.RED}The script has been modified within the Git repository. Please ensure the integrity of the script.")
+    print(f"{Fore.RED}The script has been modified. Either you modified it or there was an update.\nPlease ensure the integrity of the script.")
 
