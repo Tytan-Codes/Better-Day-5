@@ -1,0 +1,32 @@
+eula: |
+  End User License Agreement (EULA)
+  ---------------------------------
+  This is a legal agreement between you (the user) and the script author.
+
+  By using this script, you agree to the following terms and conditions:
+
+  1. You acknowledge that this script is provided "as is" without any warranties.
+  
+  2. You agree to use the script responsibly and in compliance with applicable laws and regulations.
+  
+  3. You understand that the author is not liable for any damages or losses caused by the script's use.
+  
+  4. You agree not to distribute, modify, or sell the script without the author's permission.
+  
+  ...
+
+liability_license: |
+  Liability License
+  -----------------
+  By using this script, you acknowledge and accept the following liability terms:
+
+  1. The author is not liable for any direct, indirect, incidental, or consequential damages arising out of the use or inability to use the script.
+  
+  2. You assume all risks associated with the script's use and agree to use it at your own discretion.
+  
+  3. The author does not guarantee the accuracy, reliability, or effectiveness of the script.
+  
+  ...
+
+agree_to_license/eula: false
+

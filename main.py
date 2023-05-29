@@ -25,7 +25,7 @@ try:
     print(f"{Fore.BLACK + Back.WHITE}The script has not been modified within the Git repository.")
 
     # Load the YAML file
-    with open('license.yaml') as file:
+    with open('agreement.yaml') as file:
         license_data = yaml.safe_load(file)
 
     # Check if the user has agreed to the licenses
