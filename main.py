@@ -44,20 +44,59 @@ except subprocess.CalledProcessError:
 
 def search():
     os.system('clear')
-    print(f'{Fore.RED + Style.BRIGHT}[{Fore.YELLOW}#{Fore.RED}]')
-
-
+    print(f'{Fore.RED + Style.BRIGHT}[{Fore.YELLOW}#{Fore.RED}] Options:')
+    print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}1{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}Search Amazon')
+    print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}2{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}DuckDuckGo')
+    print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}3{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}Search Youtube')
+    print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}4{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}Search NewEgg')
+    print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}5{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}Search Google')
+    print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}6{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}Search open VSCODE Web Builder')
+    print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}0{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}Back')
+    searchPick = int(input(f'{Style.BRIGHT + Fore.RED}Better Day 5 {Fore.YELLOW} > {Fore.RED} Choose: '))
+    if searchPick == 1:
+        searchAmazon = str(input('What would you like to search for. Spaces must be +: '))
+        os.system('firefox https://www.amazon.ca/s?k='+searchAmazon+'')
+        os.system('python3 main.py')
+    elif searchPick == 2:
+        searchDuck = str(input('What would you like to search for. Spaces must be +: '))
+        os.system('firefox https://duckduckgo.com/?q='+searchDuck+' ')
+        os.system('python3 main.py')
+    elif searchPick == 3:
+        searchYT = str(input('What would you like to search for. Spaces must be +: '))
+        os.system('firefox https://www.youtube.com/results?search_query='+searchYT+'')
+        os.system('python3 main.py')
+    elif searchPick == 4:
+        searchEgg = str(input('What would you like to search for. Spaces must be +: '))
+        os.system('firefox https://www.newegg.ca/p/pl?d='+searchEgg+'')
+        os.system('python3 main.py')
+    elif searchPick == 5:
+        searchG = str(input('What would you like to search for. Spaces must be +: '))
+        os.system('firefox https://www.google.com/search?q='+searchG+'')
+        os.system('python3 main.py')
+    elif searchPick == 6:
+        os.system('firefox vscode.dev')
+        os.system('python3 main.py') 
+    elif searchPick == 0:
+        os.system('clear')
+        exit()
+    else:
+        print('INVALID INPUT')
+        search()
+    
+    
 def system():
-    pass
-
-
+    os.system('clear')
+    print(f'{Fore.RED + Style.BRIGHT}[{Fore.YELLOW}#{Fore.RED}] Options:')
+    print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}1{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}Run Train')
+    
+    
 #eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 def firstSrc():
     os.system('clear')
-    print(f'{Fore.RED + Style.BRIGHT}[{Fore.YELLOW}#{Fore.RED}]')
+    print(f'{Fore.RED + Style.BRIGHT}[{Fore.YELLOW}#{Fore.RED}] Options:3')
     print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}1{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}Search')
-    print(f'{Fore.YELLOW}   2. {Fore.GREEN}System')
-    print(f'{Fore.YELLOW}   0. {Fore.GREEN}Exit')
+    print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}1{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}System')
+    print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}1{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}Exit')
     firstPick = int(input(f'{Style.BRIGHT + Fore.RED}Better Day 5 {Fore.YELLOW} > {Fore.RED} Choose: '))
 
     if firstPick == 1:
