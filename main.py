@@ -4,7 +4,7 @@ from colorama import Fore, Back, Style
 import subprocess
 import time
 import yaml
-
+import time
 colorama.init(autoreset=True)
 
 def loading_animation():
@@ -126,6 +126,10 @@ def firstSrc():
         search()
     elif firstPick == 2:
         system()
+    elif firstPick == 3:
+        os.system('clear')
+        print('ChatGPT is not ready yet.')
+        time.sleep(2)
     elif firstPick == 0:
         os.system('clear')
         exit()
