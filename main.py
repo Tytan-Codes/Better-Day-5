@@ -55,7 +55,7 @@ def system():
 def firstSrc():
     os.system('clear')
     print(f'{Fore.RED + Style.BRIGHT}[{Fore.YELLOW}#{Fore.RED}]')
-    print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}1{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE} Search')
+    print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}1{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}Search')
     print(f'{Fore.YELLOW}   2. {Fore.GREEN}System')
     print(f'{Fore.YELLOW}   0. {Fore.GREEN}Exit')
     firstPick = int(input(f'{Style.BRIGHT + Fore.RED}Better Day 5 {Fore.YELLOW} > {Fore.RED} Choose: '))
