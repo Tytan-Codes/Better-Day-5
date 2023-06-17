@@ -42,12 +42,32 @@ except subprocess.CalledProcessError:
     print(f"{Fore.RED}Either you modifed the script or there is an update.\nPlease ensure the integrity of the script. To update please run\nready.sh")
     
 
+def search():
+    pass
+
+
+def system():
+    pass
+
+
+#eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 def firstSrc():
+    os.system('clear')
     print(f'{Fore.RED + Style.BRIGHT}({Fore.YELLOW}#{Fore.RED})')
     print(f'{Fore.YELLOW}   1. {Fore.GREEN}Search')
-    print(f'{Fore.YELLOW}   1. {Fore.GREEN}System')
+    print(f'{Fore.YELLOW}   2. {Fore.GREEN}System')
+    print(f'{Fore.YELLOW}   0. {Fore.GREEN}Exit')
     firstPick = int(input(f'{Style.BRIGHT + Fore.RED}Better Day 5 {Fore.YELLOW} > {Fore.RED} Choose'))
 
-
+    if firstPick == 1:
+        search()
+    elif firstPick == 2:
+        system()
+    elif firstPick == 0:
+        os.system('clear')
+        exit()
+    else:
+        print('Invalid Input')
+        firstSrc()
 
 firstSrc()
