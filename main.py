@@ -25,11 +25,14 @@ try:
     print(f"{Fore.BLACK + Back.WHITE}The script has not been modified.")
 
     # Load the YAML file
-    with open('agreement.yaml') as file:
-        license_data = yaml.safe_load(file)
+    with open('config.yaml') as file:
+        config_data = yaml.safe_load(file)
+
+    # Retrieve the API key from the config data
+    APIKEY = config_data['openai_API_KEY']
 
     # Check if the user has agreed to the licenses
-    if not license_data['agree_to_license/eula']:
+    if not config_data['agree_to_license/eula']:
         print(f"{Fore.RED}You must agree to the license agreements before running the script.")
         exit()
 
@@ -39,8 +42,7 @@ try:
 
 except subprocess.CalledProcessError:
     # Modifications found
-    print(f"{Fore.RED}Either you modifed the script or there is an update.\nPlease ensure the integrity of the script. To update please run\nready.sh")
-    
+    print(f"{Fore.RED}Either you modified the script or there is an update.\nPlease ensure the integrity of the script. To update, please run\nready.sh")
 
 def search():
     os.system('clear')
@@ -88,15 +90,37 @@ def system():
     os.system('clear')
     print(f'{Fore.RED + Style.BRIGHT}[{Fore.YELLOW}#{Fore.RED}] Options:')
     print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}1{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}Run Train')
-    
+    print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}2{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}HTOP')
+    print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}3{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}Clone something off of github')
+    print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}4{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}Make File')
+    print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}0{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}Back')
+    systemPick = int(input(f'{Style.BRIGHT + Fore.RED}Better Day 5 {Fore.YELLOW} > {Fore.RED} Choose: '))
+    if systemPick == 1:
+        os.system('sl')
+    elif systemPick == 2:
+        os.system('htop')
+    elif systemPick == 3:
+        gitClone = (int(input(Style.BRIGHT + Fore.RED + 'Better Day ' + Style.BRIGHT + Fore.YELLOW + '> ' + Style.BRIGHT + Fore.RED + 'What would you like to clone? ')))
+        os.system('git clone '+gitClone+'')
+        os.system('python3 main.py')
+    elif systemPick == 4:
+        makeFile = (int(input(Style.BRIGHT + Fore.RED + 'Better Day ' + Style.BRIGHT + Fore.YELLOW + '> ' + Style.BRIGHT + Fore.RED + 'What file would you like to make? ')))
+        os.system('touch '+makeFile+'')
+        os.system('python3 main.py')    
+    elif systemPick == 0:
+        firstSrc()
+    else:
+        print('INVALID INPUT')   
     
 #eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 def firstSrc():
     os.system('clear')
-    print(f'{Fore.RED + Style.BRIGHT}[{Fore.YELLOW}#{Fore.RED}] Options:3')
+    print(APIKEY)
+    print(f'{Fore.RED + Style.BRIGHT}[{Fore.YELLOW}#{Fore.RED}] Options:')
     print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}1{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}Search')
-    print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}1{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}System')
-    print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}1{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}Exit')
+    print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}2{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}System')
+    print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}4{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}chatGPT')
+    print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}3{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}Exit')
     firstPick = int(input(f'{Style.BRIGHT + Fore.RED}Better Day 5 {Fore.YELLOW} > {Fore.RED} Choose: '))
 
     if firstPick == 1:
