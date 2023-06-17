@@ -29,7 +29,7 @@ try:
         config_data = yaml.safe_load(file)
 
     # Retrieve the API key from the config data
-    APIKEY = config_data['opanAI_API_KEY']
+    APIKEY = config_data['openAI_API_KEY']
 
     # Check if the user has agreed to the licenses
     if not config_data['agree_to_license/eula']:
