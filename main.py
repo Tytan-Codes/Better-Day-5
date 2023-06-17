@@ -44,7 +44,7 @@ except subprocess.CalledProcessError:
 
 def search():
     os.system('clear')
-     print(f'{Fore.RED + Style.BRIGHT}[{Fore.YELLOW}#{Fore.RED}]')
+    print(f'{Fore.RED + Style.BRIGHT}[{Fore.YELLOW}#{Fore.RED}]')
 
 
 def system():
