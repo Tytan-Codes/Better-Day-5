@@ -22,7 +22,7 @@ try:
     subprocess.check_output(['git', 'diff', '--exit-code', script_path])
 
     # No modifications found
-    print(f"{Fore.BLACK + Back.WHITE}The script has not been modified within the Git repository.")
+    print(f"{Fore.BLACK + Back.WHITE}The script has not been modified.")
 
     # Load the YAML file
     with open('agreement.yaml') as file:
@@ -39,5 +39,11 @@ try:
 
 except subprocess.CalledProcessError:
     # Modifications found
-    print(f"{Fore.RED}The script has been modified within the Git repository. Please ensure the integrity of the script.")
+    print(f"{Fore.RED}Either you modifed the script or there is an update.\nPlease ensure the integrity of the script. To update please run\nready.sh")
+    
 
+def firstSrc():
+    print(f'{Fore.RED + Style.BRIGHT}({Fore.YELLOW}#{Fore.RED})')
+    print(f'{Fore.YELLOW}   1. {Fore.GREEN}Search')
+    print(f'{Fore.YELLOW}   1. {Fore.GREEN}System')
+    firstPick = int(input(f'{Style.BRIGHT + Fore.RED}Better Day 5 {Fore.YELLOW} > {Fore.RED} Choose'))
