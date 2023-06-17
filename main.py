@@ -29,7 +29,7 @@ try:
         config_data = yaml.safe_load(file)
 
     # Retrieve the API key from the config data
-    APIKEY = config_data['openai_API_KEY']
+    APIKEY = config_data['opanAI_API_KEY']
 
     # Check if the user has agreed to the licenses
     if not config_data['agree_to_license/eula']:
@@ -115,12 +115,11 @@ def system():
 #eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 def firstSrc():
     os.system('clear')
-    print(APIKEY)
     print(f'{Fore.RED + Style.BRIGHT}[{Fore.YELLOW}#{Fore.RED}] Options:')
     print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}1{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}Search')
     print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}2{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}System')
-    print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}4{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}chatGPT')
-    print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}3{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}Exit')
+    print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}3{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}chatGPT')
+    print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}0{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}Exit')
     firstPick = int(input(f'{Style.BRIGHT + Fore.RED}Better Day 5 {Fore.YELLOW} > {Fore.RED} Choose: '))
 
     if firstPick == 1:
