@@ -47,3 +47,7 @@ def firstSrc():
     print(f'{Fore.YELLOW}   1. {Fore.GREEN}Search')
     print(f'{Fore.YELLOW}   1. {Fore.GREEN}System')
     firstPick = int(input(f'{Style.BRIGHT + Fore.RED}Better Day 5 {Fore.YELLOW} > {Fore.RED} Choose'))
+
+
+
+firstSrc()
