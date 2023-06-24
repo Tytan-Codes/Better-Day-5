@@ -6,7 +6,7 @@ import time
 import yaml
 import time
 colorama.init(autoreset=True)
-
+import openai
 def loading_animation():
     animation = "|/-\\"
     for i in range(10):
@@ -43,6 +43,85 @@ try:
 except subprocess.CalledProcessError:
     # Modifications found
     print(f"{Fore.RED}Either you modified the script or there is an update.\nPlease ensure the integrity of the script. To update, please run\nready.sh")
+
+def chatGPT():
+    try:
+        # Load API key and language model from config.yaml file
+        with open('config.yaml') as file:
+            config = yaml.safe_load(file)
+            language_model = config['language_model']
+
+        # Set up OpenAI API credentials
+        openai.api_key = APIKEY
+
+
+
+        # Define the initial user prompt
+        prompt = str(input(f'{Style.BRIGHT + Fore.RED}chatGPT 5{Fore.YELLOW} > {Fore.RED} Prompt: '))
+
+        # Initialize the conversation
+        conversation = f"User: {prompt}\nAI:"
+
+        while True:
+            # Show loading animation
+            loading_symbols = "|/-\\"
+            for _ in range(10):
+                for symbol in loading_symbols:
+                    print(f"\rAI is thinking... {symbol}", end='')
+                    time.sleep(0.1)
+
+            # Prompt ChatGPT for the next response
+            response = openai.Completion.create(
+                engine=language_model,
+                prompt=conversation,
+                max_tokens=1000,
+                temperature=0.7,
+            )
+
+            # Extract the generated response
+            ai_response = response.choices[0].text.strip()
+
+            # Clear the loading animation line
+            print(" " * 30, end='\r')
+
+            # Format the AI's response in a box
+            os.system('clear')
+            response_box = f"""
+        ********************************
+        {ai_response.center(30)}
+        ********************************
+        """
+
+            # Print the AI's response with enhanced typewriter-style effect
+            print(response_box)
+
+            # Update the conversation
+            conversation += f"\nUser: {prompt}\nAI: {ai_response}\n"
+            prompt = str(input(f'\n{Style.BRIGHT + Fore.RED}chatGPT 5{Fore.YELLOW} > {Fore.RED} Prompt: '))
+
+    
+    except openai.error.InvalidRequestError as e:
+        print("\nAn InvalidRequestError occurred:", str(e) + '\n\n\nThis could mean that the model you are using can\'t handel the amount of tokens (Text) That you have given it.\nJust change the model you are using.')
+
+    except openai.error.AuthenticationError:
+        print('You either have a invalid (openAI) API key of none at ALL. ADD one.')
+
+    except yaml.YAMLError:
+        print('There was a error with the config.yaml file. Make sure it is in the same directory as the main.py file.')
+    except yaml.parser.ParserError:
+        print('You have a syntax error in the config file.')
+
+
+    except KeyboardInterrupt:
+        print(f'\n\nGoing back to start src')
+        print('3')
+        time.sleep(1)
+        print('2')
+        time.sleep(1)
+        print('1')
+        time.sleep(1)
+        exit()
+        
 
 def search():
     os.system('clear')
@@ -128,8 +207,7 @@ def firstSrc():
         system()
     elif firstPick == 3:
         os.system('clear')
-        print('ChatGPT is not ready yet.')
-        time.sleep(2)
+        chatGPT()
     elif firstPick == 0:
         os.system('clear')
         exit()
