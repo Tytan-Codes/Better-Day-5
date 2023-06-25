@@ -25,12 +25,11 @@ try:
     print(f"{Fore.BLACK + Back.WHITE}The script has not been modified.")
 
     # Load the YAML file
-    with open('config.yaml') as file:
+    with open('config.yml') as file:
         config_data = yaml.safe_load(file)
 
     # Retrieve the API key from the config data
-    APIKEY = config_data['openAI_API_KEY']
-
+        
     # Check if the user has agreed to the licenses
     if not config_data['agree_to_license/eula']:
         print(f"{Fore.RED}You must agree to the license agreements before running the script.")
@@ -47,12 +46,13 @@ except subprocess.CalledProcessError:
 def chatGPT():
     try:
         # Load API key and language model from config.yaml file
-        with open('config.yaml') as file:
+        with open('config.yml') as file:
             config = yaml.safe_load(file)
+            key = config['api key']
             language_model = config['language_model']
 
         # Set up OpenAI API credentials
-        openai.api_key = APIKEY
+        openai.api_key = key
 
 
 
@@ -120,7 +120,7 @@ def chatGPT():
         time.sleep(1)
         print('1')
         time.sleep(1)
-        exit()
+        firstSrc()
         
 
 def search():

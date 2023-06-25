@@ -28,10 +28,10 @@ liability_license: |
   
   ...
 
-agree_to_license/eula: false
+agree_to_license/eula: true
 
 
-openAI_API_KEY: API KEY GOES HERE
+api key: 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
 language_model: 'text-ada-001'
 # language_model: 'gpt-3.5-turbo'
 #   description: 'ChatGPT with advanced natural language processing capabilities. A little better then the free version on chat.openai.com'
@@ -41,8 +41,8 @@ language_model: 'text-ada-001'
 #   price: '$0.005 1k per token'
 # language_model: 'text-davinci-002'
 #   description: 'General-purpose language model with a lower cost.'
-#   price: '$0.03 1k per token'
+#   price: '$0.002 1k per token'
 # language_model: 'text-ada-001'
-#   description: 'Cheapest general-purpose language model.'
+#   description: 'Cheapest general-purpose language model. Will be REAL stypid some times.'
 #   price: '$0.0004 per 1k token'
 
