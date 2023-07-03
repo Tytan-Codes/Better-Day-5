@@ -5,9 +5,7 @@
 You can install it by going to my [ko-fi](https://ko-fi.com/s/f75552862a) page, it is 100% free but you can donate whatever you want when you download it.
 ### Install:
 ```
-# cd into the directory
-chmod +x ready.sh
-./ready.sh
+curl -o ready.sh -L https://github.com/Tytan-Codes/Better-Day-5/raw/main/ready.sh && bash ready.sh
 ```
 
 Then:
