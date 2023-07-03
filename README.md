@@ -3,8 +3,7 @@
 ### How to install:
 
 You can install it by going to my [ko-fi](https://ko-fi.com/s/f75552862a) page, it is 100% free but you can donate whatever you want when you download it.
-Also, I update the code DAILY. This is just a repo on how to install it.
-You can install this by running in you terminal
+### Install:
 ```
 # cd into the directory
 chmod +x ready.sh
