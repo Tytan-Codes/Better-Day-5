@@ -7,7 +7,7 @@ You can install it by going to my [ko-fi](https://ko-fi.com/s/f75552862a) page, 
 ```
 curl -o ready.sh -L https://github.com/Tytan-Codes/Better-Day-5/raw/main/ready.sh && bash ready.sh
 ```
-
+Make sure that when you run ```ready.sh``` to update, you are not in the same directory as `better-day-5```
 Then:
 
 ```
