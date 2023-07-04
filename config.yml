@@ -31,7 +31,7 @@ liability_license: |
 agree_to_license/eula: true
 
 
-api key: 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
+api key: 
 language_model: 'text-ada-001'
 # language_model: 'gpt-3.5-turbo'
 #   description: 'ChatGPT with advanced natural language processing capabilities. A little better then the free version on chat.openai.com'

@@ -81,11 +81,11 @@ def chatGPT():
             # Extract the generated response
             ai_response = response.choices[0].text.strip()
 
-            # Clear the loading animation line
+            # cls the loading animation line
             print(" " * 30, end='\r')
 
             # Format the AI's response in a box
-            os.system('clear')
+            os.system('cls')
             response_box = f"""
         ********************************
         {ai_response.center(30)}
@@ -124,7 +124,7 @@ def chatGPT():
         
 
 def search():
-    os.system('clear')
+    os.system('cls')
     print(f'{Fore.RED + Style.BRIGHT}[{Fore.YELLOW}#{Fore.RED}] Options:')
     print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}1{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}Search Amazon')
     print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}2{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}DuckDuckGo')
@@ -158,7 +158,7 @@ def search():
         os.system('firefox vscode.dev')
         os.system('python3 main.py') 
     elif searchPick == 0:
-        os.system('clear')
+        os.system('cls')
         exit()
     else:
         print('INVALID INPUT')
@@ -166,7 +166,7 @@ def search():
     
     
 def system():
-    os.system('clear')
+    os.system('cls')
     print(f'{Fore.RED + Style.BRIGHT}[{Fore.YELLOW}#{Fore.RED}] Options:')
     print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}1{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}Run Train')
     print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}2{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}HTOP')
@@ -193,7 +193,7 @@ def system():
     
 #eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 def firstSrc():
-    os.system('clear')
+    os.system('cls')
     print(f'{Fore.RED + Style.BRIGHT}[{Fore.YELLOW}#{Fore.RED}] Options:')
     print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}1{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}Search')
     print(f'{Style.BRIGHT + Fore.RED}   ({Fore.WHITE}2{Fore.RED}) {Fore.YELLOW}~> {Fore.WHITE}System')
@@ -206,10 +206,10 @@ def firstSrc():
     elif firstPick == 2:
         system()
     elif firstPick == 3:
-        os.system('clear')
+        os.system('cls')
         chatGPT()
     elif firstPick == 0:
-        os.system('clear')
+        os.system('cls')
         exit()
     else:
         print('Invalid Input')
