@@ -43,6 +43,6 @@ language_model: 'text-ada-001'
 #   description: 'General-purpose language model with a lower cost.'
 #   price: '$0.002 1k per token'
 # language_model: 'text-ada-001'
-#   description: 'Cheapest general-purpose language model. Will be REAL stypid some times.'
+#   description: 'Cheapest general-purpose language model. Will be REAL stupid some times.'
 #   price: '$0.0004 per 1k token'
 
