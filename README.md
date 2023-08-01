@@ -3,9 +3,9 @@
 ### How to install:
 
 You can install it by going to my [ko-fi](https://ko-fi.com/s/f75552862a) page, it is 100% free but you can donate whatever you want when you download it.
-### Install:
-```
-curl -o ready.sh -L https://github.com/Tytan-Codes/Better-Day-5/raw/main/ready.sh && bash ready.sh
+### Install (using Ubuntu, or Debian systems):
+```bash
+apt-get update -y && apt-get install curl -y && curl -o ready.sh -L https://github.com/Tytan-Codes/Better-Day-5/raw/main/ready.sh && bash ready.sh
 ```
 Make sure that when you run ```ready.sh``` to update, you are not in the same directory as ```better-day-5```
 Then:
