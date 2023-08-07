@@ -15,7 +15,12 @@ cd better-day-5
 python3 main.py
 ```
 
-*** DO NOT GET RID OF THE ```ready.sh``` THAT IS NEEDED TO UPDATE THE SCRIPT ***
+### Updating:
+
+```
+update.py
+```
+~~ *** DO NOT GET RID OF THE ```ready.sh``` THAT IS NEEDED TO UPDATE THE SCRIPT *** ~~
 
 ### Configuration:
 
