@@ -20,7 +20,7 @@ python3 main.py
 ```
 update.py
 ```
-~~ *** DO NOT GET RID OF THE ```ready.sh``` THAT IS NEEDED TO UPDATE THE SCRIPT *** ~~
+~~*** DO NOT GET RID OF THE ```ready.sh``` THAT IS NEEDED TO UPDATE THE SCRIPT ***~~
 
 ### Configuration:
 
