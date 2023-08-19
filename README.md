@@ -33,7 +33,7 @@ This script can do many things here a list:
 - search certain websites
 - run system commands
 - git clone
-- [ ] chatGPT functionns
+- chatGPT functionns
 
 
 
