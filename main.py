@@ -104,12 +104,12 @@ def chatGPT():
         print("\nAn InvalidRequestError occurred:", str(e) + '\n\n\nThis could mean that the model you are using can\'t handel the amount of tokens (Text) That you have given it.\nJust change the model you are using.')
 
     except openai.error.AuthenticationError:
-        print('You either have a invalid (openAI) API key of none at ALL. ADD one.')
+        print('\nYou either have a invalid (openAI) API key of none at ALL. ADD one.')
 
     except yaml.YAMLError:
-        print('There was a error with the config.yaml file. Make sure it is in the same directory as the main.py file.')
+        print('\nThere was a error with the config.yaml file. Make sure it is in the same directory as the main.py file.')
     except yaml.parser.ParserError:
-        print('You have a syntax error in the config file.')
+        print('\nYou have a syntax error in the config file.')
 
 
     except KeyboardInterrupt:
