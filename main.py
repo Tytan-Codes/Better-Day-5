@@ -16,7 +16,7 @@ def loading_animation():
 # Get the path of the current script
 script_path = os.path.realpath(__file__)
 
-# Check if the script has been modified in a Git repository
+# Chek if the script has been modified in a Git repository
 try:
     # Run 'git diff' command to check if the script has modifications
     subprocess.check_output(['git', 'diff', '--exit-code', script_path])
@@ -41,8 +41,8 @@ try:
 
 except subprocess.CalledProcessError:
     # Modifications found
-    print(f"{Fore.RED}Either you modified the script or there is an update.\nPlease ensure the integrity of the script. To update, please run\nready.sh")
-
+    print(f"{Fore.RED}Either you modified the script or there is an update.\nPlease ensure the integrity of the script. To update, please run\nready.sh or update.py")
+    exit()
 def chatGPT():
     try:
         # Load API key and language model from config.yaml file
