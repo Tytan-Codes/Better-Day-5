@@ -12,7 +12,7 @@ def loading_animation():
     for i in range(10):
         time.sleep(0.1)  # Add a small delay to control the animation speed
         print(f"\rLoading {animation[i % len(animation)]}", end="", flush=True)
-#TEST
+
 # Get the path of the current script
 script_path = os.path.realpath(__file__)
 
