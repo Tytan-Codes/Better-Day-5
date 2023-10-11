@@ -161,7 +161,7 @@ def search():
         os.system('cls')
         exit()
     else:
-        print('INVALID INPUT')
+        print('PLEASE, use your brain, its a number input, USE YOUR BRAIN')
         search()
     
     
@@ -189,7 +189,7 @@ def system():
     elif systemPick == 0:
         firstSrc()
     else:
-        print('INVALID INPUT')   
+        print('PLEASE, use your brain, its a number input, USE YOUR BRAIN')   
     
 #eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 def firstSrc():
@@ -212,7 +212,7 @@ def firstSrc():
         os.system('cls')
         exit()
     else:
-        print('Invalid Input')
+        print('PLEASE, use your brain, its a number input, USE YOUR BRAIN')
         firstSrc()
 #wasd
 firstSrc()
