@@ -36,6 +36,17 @@ This script can do many things here a list:
 - chatGPT functionns
 
 
+### No python
+
+If you don't have python installed, you can still use the script! Heres how:
+```bash
+#macos
+source nopython/bin/activate
+#powershell
+nopython/bin/activate.ps1
+#cmd
+nopython/bin/activate.bat
+```
 
 ### Common Errors:
 ```
